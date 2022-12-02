@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-function MyCompo(props) {
-  console.log("my Compo.js");
+function MyCompo({ getItems }) {
+  const [items, setItems] = useState([]);
 
-  return <div>hey my campo</div>;
+  useEffect(() => {
+    setItems(getItems());
+    console.log("Updateing ITEMS");
+  }, [getItems]);
+
+  return items.map((item) => <h4 key={item}>{item}</h4>);
 }
 
 export default MyCompo;
