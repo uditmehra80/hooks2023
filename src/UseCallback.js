@@ -30,7 +30,7 @@ function UseCallback() {
 
     return (
         <div style={theme}>
-            <input autoFocus type='number' value={number} onChange={e => setNumber(e.target.value)} />
+            <input autoFocus type='number' value={number} onChange={e => setNumber(parseInt(e.target.value))} />
             <button onClick={() => setDark((prev) => !prev)}>Change theme</button>
             <MyCompo getItems={getItems} />
         </div>
