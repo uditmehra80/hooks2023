@@ -7,8 +7,6 @@ import {
     Link
 } from "react-router-dom";
 
-
-
 const Lazy = lazy(() => import('./Lazy'));
 const UseCallback = lazy(() => import('./UseCallback'));
 const UseContext = lazy(() => import('./UseContext'));
@@ -19,13 +17,13 @@ const UseRef = lazy(() => import('./UseRef'));
 const UseRef2 = lazy(() => import('./UseRef2'));
 const UseTransition = lazy(() => import('./UseTransition'));
 const UseLayoutEffect = lazy(() => import('./UseLayoutEffect'));
-
-
+const UseId = lazy(() => import('./UseId'));
+const UseImperativeHandle = lazy(() => import('./UseImperativeHandle'));
 
 function App() {
     return (
         <div className="App">
-            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 2rem', boxShadow: '1px 1px 5px 1px gray' }}>
+            <div className='main-div' style={{ display: 'grid', gridTemplateColumns: 'auto auto auto auto auto auto', padding: '1rem 2rem', boxShadow: '1px 1px 5px 1px gray' }}>
                 <a href="http://localhost:3000">Lazy</a>
                 <a href="http://localhost:3000/use-Callback">UseCallback</a>
                 <a href="http://localhost:3000/use-Context">UseContext</a>
@@ -36,7 +34,8 @@ function App() {
                 <a href="http://localhost:3000/use-Ref-2">UseRef2</a>
                 <a href="http://localhost:3000/use-Transition">UseTransition</a>
                 <a href="http://localhost:3000/use-LayoutEffect">UseLayoutEffect</a>
-
+                <a href="http://localhost:3000/use-Id">UseId</a>
+                <a href="http://localhost:3000/use-ImperativeHandle">UseImperativeHandle</a>
             </div>
 
             <BrowserRouter>
@@ -52,7 +51,8 @@ function App() {
                         <Route path="/use-Ref-2" element={<UseRef2 />} />
                         <Route path="/use-Transition" element={<UseTransition />} />
                         <Route path="/use-LayoutEffect" element={<UseLayoutEffect />} />
-
+                        <Route path="/use-Id" element={<UseId />} />
+                        <Route path="/use-ImperativeHandle" element={<UseImperativeHandle />} />
                     </Routes>
                 </Suspense>
             </BrowserRouter>

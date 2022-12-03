@@ -2,7 +2,10 @@ import React, { useId } from 'react';
 
 function UseId(props) {
     const id = useId()
+    const id1 = useId()
+
     console.log(id);
+    console.log(id1);
     return (
         <>
             <div>
