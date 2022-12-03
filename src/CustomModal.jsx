@@ -3,7 +3,6 @@ import React, { useRef, useImperativeHandle } from "react";
 function CustomModal({ open, onClose }, ref) {
   const closeRef = useRef();
   const confirmRef = useRef();
-  const denyRef = useRef();
 
   useImperativeHandle(ref, () => {
     return {

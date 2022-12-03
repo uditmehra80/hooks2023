@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import CustomModal from './CustomModal'
+import CustomModal from './CustomModal';
 
 function UseImperativeHandle(props) {
     const [open, setOpen] = useState(false);
