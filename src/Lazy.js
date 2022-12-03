@@ -33,15 +33,15 @@ function App() {
       hello app */}
       {/* <MyCompo />
       <MyCompo2 /> */}
+      <h5>hey lazy</h5>
 
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
-            <Route path="/" element={<MyCompo />} />
             <Route path="/2" element={<MyCompo2 />} />
           </Routes>
         </Suspense>
-      </BrowserRouter>
+      </BrowserRouter> */}
 
     </div>
   );
